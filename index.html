@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مواعيد العيادة</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f7f9;--card:#fff;--tx:#14262b;--mu:#6b7f86;--ac:#0d9488;--bd:#dbe6ea;--bad:#dc2626;--ok:#16a34a;--wn:#d97706;--sh:0 4px 14px rgba(10,60,80,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1517;--card:#172125;--tx:#eaf3f5;--mu:#8fa5ac;--ac:#2dd4bf;--bd:#2a3a40;--bad:#ff7b7b;--ok:#3ed398;--wn:#f2b541;--sh:0 4px 14px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#0e1517;--card:#172125;--tx:#eaf3f5;--mu:#8fa5ac;--ac:#2dd4bf;--bd:#2a3a40;--bad:#ff7b7b;--ok:#3ed398;--wn:#f2b541;--sh:0 4px 14px rgba(0,0,0,.35)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Cairo,system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;font-size:16px}
+.w{max-width:640px;margin:0 auto;padding:0 16px 100px;animation:f .25s ease}
+@keyframes f{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;touch-action:manipulation;user-select:none}button:active{opacity:.7}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:18px 0 8px}
+.hd h1{margin:0;font-size:20px;font-weight:800}
+.lk{background:none;border:0;color:var(--mu);font-size:13px;text-decoration:underline;margin-right:12px}
+input,select{width:100%;padding:11px;border:1px solid var(--bd);border-radius:12px;background:var(--card)}
+.nv{display:flex;align-items:center;justify-content:space-between;margin:12px 0}
+.nv button{background:var(--card);border:0;border-radius:12px;width:40px;height:40px;font-size:18px;box-shadow:var(--sh)}.nv b{font-size:16px}
+.vr{display:flex;align-items:center;gap:12px;width:100%;text-align:right;background:var(--card);border:0;border-radius:16px;padding:13px 14px;margin-bottom:8px;box-shadow:var(--sh);color:var(--tx);border-right:5px solid var(--ac)}
+.vr.sa{border-color:var(--ok)}.vr.sm{border-color:var(--wn)}.vr.sx{border-color:var(--bd);opacity:.55}
+.vr .tm{font-weight:800;direction:ltr;min-width:50px;color:var(--ac);text-align:center}.vr .tm small{display:block;font-weight:400;color:var(--mu);font-size:11px}
+.vr .in{flex:1;min-width:0}.vr .in b{display:block}.vr .in small{color:var(--mu);font-size:13px}
+.chip{border-radius:20px;padding:4px 12px;font-weight:800;font-size:12px;color:#fff;background:var(--ac);white-space:nowrap}
+.cm{background:var(--wn)}.ca{background:var(--ok)}.cx{background:var(--mu)}
+.fab{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));border:0;border-radius:16px;padding:14px 24px;background:var(--ac);color:var(--card);font-weight:800;box-shadow:0 8px 20px rgba(13,148,136,.35);z-index:9}
+.empty{text-align:center;color:var(--mu);padding:30px 0}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);display:grid;place-items:center;z-index:50;padding:16px;overflow:auto}
+.bx{background:var(--card);border-radius:20px;padding:20px;max-width:390px;width:100%}
+.bx h3{margin:0 0 2px}.bx p{margin:0 0 14px;font-weight:800;text-align:center}.bx .s{color:var(--mu);font-size:14px}.bx label{display:block;font-size:13px;color:var(--mu);margin:10px 0 4px}
+.bx input,.bx select{background:var(--bg)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}.ch{border:1px solid var(--bd);background:var(--bg);border-radius:20px;padding:7px 12px;font-size:13px;font-weight:600}.ch.on{background:var(--ac);color:var(--card);border-color:var(--ac)}
+.dd{width:100%;text-align:right;padding:11px;border:1px solid var(--bd);border-radius:12px;background:var(--bg);font-weight:600;color:var(--tx)}.ddl{max-height:210px;overflow:auto;border:1px solid var(--bd);border-radius:12px;margin-top:6px;background:var(--bg)}.do{display:block;width:100%;text-align:right;border:0;background:none;padding:10px 12px;border-bottom:1px solid var(--bd);color:var(--tx)}.do.on{color:var(--ac);font-weight:800}.px{border:0;background:none;color:var(--bad);font-size:14px;margin-right:6px}
+.r3{display:flex;gap:8px}.r3>div{flex:1;min-width:0}.r3>.cu{flex:0 0 86px}
+.r2{display:flex;gap:8px}.r2>div{flex:1;min-width:0}
+.seg{display:flex;gap:6px;margin-top:8px}.seg button{flex:1;border:0;border-radius:12px;padding:11px 4px;font-weight:800;background:var(--bd)}.seg .on{background:var(--ac);color:var(--card)}.seg .on.sa{background:var(--ok)}
+.yn{display:flex;gap:10px;margin-top:16px}.yn button{flex:1;border:0;border-radius:12px;padding:12px;font-weight:800;background:var(--bd)}
+.yn .y{background:var(--ac);color:var(--card)}.yn .r{background:var(--bad);color:#fff}
+.ln{display:flex;justify-content:space-between;padding:10px 2px;border-bottom:1px solid var(--bd)}.ln span{color:var(--mu)}
+.neg{color:var(--bad)}.pos{color:var(--ok)}
+.pad{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:290px;margin:18px auto}
+.pad button{height:62px;border-radius:18px;border:0;background:var(--card);box-shadow:var(--sh);font-size:22px;font-weight:800}
+.dots{display:flex;justify-content:center;gap:12px;margin-top:20px}.dots i{width:15px;height:15px;border-radius:50%;background:var(--bd)}.dots i.f{background:var(--ac)}
+.sp{text-align:center;margin-top:60px}.sp h1{font-size:26px;margin:0}.sp p{color:var(--mu);margin:6px 0 0}
+.hb{display:none;border:0;border-radius:12px;padding:10px 18px;background:var(--ac);color:var(--card);font-weight:800}
+@media(min-width:860px){.w{max-width:980px;padding:0 28px 60px}.lst{display:grid;grid-template-columns:1fr 1fr;gap:12px}.lst .vr{margin:0}.fab{display:none}.hb{display:inline-block}.hd h1{font-size:24px}.hd{padding-top:26px}#q{max-width:420px}.nv{max-width:520px}.bx{max-width:430px}}
+.toast{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:10px 16px;border-radius:14px;z-index:99;font-size:14px}
+</style>
+</head>
+<body>
+<div class="w" id="app"></div>
+<script>
+/* ===== إعدادات العيادة: غيّر هذين السطرين فقط ===== */
+var STORE="عيادة الدكتور 2";             // اسم العيادة
+var API="https://script.google.com/macros/s/AKfycbzrIfHMSP7gpo5N7scAevYCC0fuDL1l6Epl2hsNoVzX7vOkzWFR_4hmCqpwLE8WDc_u/exec";     // رابط Google Apps Script (ينتهي بـ /exec)
+/* ================================================= */
+var PL=7,PINV="",busy=false,CU={S:"ل.س.ج",D:"$"};
+var TR=["كشف","استشارة","تنظيف جير","تبييض","حشوة","علاج عصب","خلع","خلع جراحي","تاج","جسر","طقم متحرك","زراعة","تقويم","علاج لثة","قشور تجميلية","أشعة","متابعة","أخرى"];
+var on=false,pin="",day="",q="",ap=[],ask=null,draft={};
+function ymd(d){var x=d.getMonth()+1,y=d.getDate();return d.getFullYear()+"-"+(x<10?"0":"")+x+"-"+(y<10?"0":"")+y}
+function shift(s,n){var d=new Date(s+"T12:00:00");d.setDate(d.getDate()+n);return ymd(d)}
+function fd(s){return new Date(s+"T12:00:00").toLocaleDateString("ar",{weekday:"long",day:"numeric",month:"long"})}
+function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
+function m(n){return Number(n).toLocaleString("ar-EG")}
+function mo(n,c){return c==="D"?"$"+m(n):m(n)+" "+CU.S}
+function toast(t){var o=document.getElementById("ts");if(o)o.remove();var d=document.createElement("div");d.className="toast";d.id="ts";d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},2400)}
+function norm(x){x.tr=x.tr||[];x.pay=x.pay||[];x.cost=+x.cost||0;x.paid=+x.paid||0;x.cu=x.cu||"S";x.other=x.other||"";return x}
+function call(o){o.pin=PINV;var f=fetch(API,{method:"POST",body:JSON.stringify(o)}).then(function(r){return r.json()});var t=new Promise(function(_,rej){setTimeout(function(){rej(new Error("timeout"))},30000)});return Promise.race([f,t])}
+function loadAll(silent){return call({action:"list"}).then(function(j){if(j&&j.ok){ap=j.items.map(norm);R()}else if(j&&(j.error==="bad"||j.error==="locked")){logout()}else if(!silent)toast("تعذر تحميل البيانات")}).catch(function(){if(!silent)toast("تعذر الاتصال بالإنترنت")})}
+function sync(items,rem){
+ var p=[];if(items&&items.length)p.push(call({action:"upsert",items:items}));if(rem&&rem.length)p.push(call({action:"remove",ids:rem}));
+ Promise.all(p).then(function(r){if(r.some(function(j){return!(j&&j.ok)}))throw 0}).catch(function(){toast("لم يتم الحفظ، تحقق من الاتصال");loadAll(true)});
+}
+function logout(){on=false;PINV="";pin="";ap=[];R()}
+function stt(a){if(a.st==="x")return["x","ألغي"];if(a.st==="a")return["a","حضر"];return a.date<ymd(new Date())?["m","لم يحضر"]:["w","بانتظار"]}
+function trText(a){var t=(a.tr||[]).filter(function(x){return x!=="أخرى"});if((a.tr||[]).indexOf("أخرى")>-1&&a.other)t.push(a.other);return t.join("، ")}
+function remText(name){var r={S:0,D:0};ap.forEach(function(x){if(x.name===name&&x.st!=="x")r[x.cu||"S"]+=x.cost-x.paid});var p=[];if(r.S>0)p.push(mo(r.S,"S"));if(r.D>0)p.push(mo(r.D,"D"));return p.join(" + ")}
+function card(a,sd){
+ var s=stt(a),r=a.cost-a.paid,sub=esc(trText(a)||"العلاج غير محدد")+(a.cost>0?' · الحساب '+mo(a.cost,a.cu)+(r>0?' · باقي '+mo(r,a.cu):' · مسدد'):'');
+ return '<button class="vr s'+s[0]+'" data-a="vo" data-i="'+a.id+'"><span class="tm">'+a.time+(sd?'<small>'+a.date.slice(5)+'</small>':'')+'</span><span class="in"><b>'+esc(a.name)+'</b><small>'+sub+'</small></span><span class="chip c'+s[0]+'">'+s[1]+'</span></button>';
+}
+function loginV(){
+ var d='';for(var k=0;k<PL;k++)d+='<i class="'+(k<pin.length?'f':'')+'"></i>';
+ var h='<div class="sp"><h1>🦷 '+esc(STORE)+'</h1><p>'+(busy?'جاري التحقق...':'أدخل كلمة السر')+'</p></div><div class="dots">'+d+'</div><div class="pad">';
+ for(var n=1;n<=9;n++)h+='<button data-a="k" data-i="'+n+'">'+n+'</button>';
+ return h+'<span></span><button data-a="k" data-i="0">0</button><button data-a="kd">⌫</button></div>';
+}
+function R(){
+ var app=document.getElementById("app");
+ if(!on){app.innerHTML=loginV();return}
+ var h='<div class="hd"><h1>مواعيد العيادة</h1><span><button class="hb" data-a="new">＋ موعد جديد</button><button class="lk" data-a="rf">تحديث</button><button class="lk" data-a="sum">ملخص الشهر</button><button class="lk" data-a="out">خروج</button></span></div><input id="q" autocomplete="off" placeholder="ابحث باسم المريض" value="'+esc(q)+'">';
+ if(q){
+  var l=ap.filter(function(a){return a.name.indexOf(q)>-1}).sort(function(a,b){return a.date+a.time<b.date+b.time?1:-1});
+  h+='<div class="lst">';l.forEach(function(a){h+=card(a,true)});h+='</div>';if(!l.length)h+='<div class="empty">لا يوجد نتائج</div>';
+ }else{
+  var l2=ap.filter(function(a){return a.date===day}).sort(function(a,b){return a.time<b.time?-1:1});
+  h+='<div class="nv"><button data-a="pd">›</button><b>'+(day===ymd(new Date())?'اليوم · ':'')+fd(day)+'</b><button data-a="nd">‹</button></div>';
+  h+='<div class="lst">';l2.forEach(function(a){h+=card(a)});h+='</div>';if(!l2.length)h+='<div class="empty">لا يوجد مواعيد بهذا اليوم</div>';
+ }
+ app.innerHTML=h+'<button class="fab" data-a="new">＋ موعد</button>';
+ var qi=document.getElementById("q");qi.oninput=function(){q=qi.value.trim();var s=qi.selectionStart;R();var n=document.getElementById("q");n.focus();n.setSelectionRange(s,s)};
+}
+function ov(html){var o=document.getElementById("ov");if(!o){o=document.createElement("div");o.className="ov";o.id="ov";document.body.appendChild(o)}o.innerHTML='<div class="bx">'+html+'</div>'}
+function cl(){var o=document.getElementById("ov");if(o)o.remove()}
+function conf(t,red){ov('<p>'+esc(t)+'</p><div class="yn"><button class="'+(red?'r':'y')+'" data-a="yes">نعم</button><button data-a="no">لا</button></div>')}
+var trSel=[];
+function srt(){return trSel.slice().sort(function(x,y){return TR.indexOf(x)-TR.indexOf(y)})}
+function ddText(){return(trSel.length?srt().join("، "):"اختر نوع العلاج")+" ▾"}
+function dd(sel){trSel=(sel||[]).slice();return'<button type="button" class="dd" id="ddb" data-a="dd">'+ddText()+'</button><div class="ddl" id="ddl" style="display:none">'+TR.map(function(t){var o=trSel.indexOf(t)>-1;return'<button type="button" class="do'+(o?' on':'')+'" data-a="tg" data-i="'+t+'">'+(o?'✔ ':'')+t+'</button>'}).join('')+'</div>'}
+function oth(sel,v){return'<div id="ot" style="display:'+(sel.indexOf("أخرى")>-1?'block':'none')+'"><input id="g9" autocomplete="off" placeholder="اكتب نوع المعالجة" value="'+esc(v||'')+'" style="margin-top:8px"></div>'}
+function gather(){return srt()}
+function oval(){var o=document.getElementById("g9");return o?o.value.trim():""}
+function sumPay(x){return(x.pay||[]).reduce(function(s,p){return s+p.a},0)}
+function form(d){d=d||{};ov('<h3>موعد جديد</h3><label>اسم المريض</label><input id="f1" autocomplete="off" value="'+esc(d.name||'')+'"><label>الهاتف</label><input id="f2" type="tel" value="'+esc(d.phone||'')+'"><div class="r2"><div><label>التاريخ</label><input id="f3" type="date" value="'+(d.date||day)+'"></div><div><label>الساعة</label><input id="f4" type="time" value="'+(d.time||'10:00')+'"></div></div><label>نوع العلاج (اختياري)</label>'+dd(d.tr||[])+oth(d.tr||[],d.other)+'<div class="r3"><div><label>الحساب الكلي</label><input id="f6" type="number" inputmode="decimal" value="'+(d.cost||'')+'"></div><div><label>المدفوع الآن</label><input id="f7" type="number" inputmode="decimal" value="'+(d.paid||'')+'"></div><div class="cu"><label>العملة</label><select id="fc"><option value="S"'+(d.cu!=="D"?' selected':'')+'>'+CU.S+'</option><option value="D"'+(d.cu==="D"?' selected':'')+'>$</option></select></div></div><div class="yn"><button class="y" data-a="sv">إضافة</button><button data-a="cf">إلغاء</button></div>')}
+function visit(a){
+ var cur=a.st==="a"?"a":a.st==="x"?"x":"w",rm=remText(a.name),c=a.cu||"S";
+ var pl=(a.pay||[]).map(function(p,k){return'<div class="ln"><span>'+p.d+'</span><b>'+mo(p.a,c)+'<button type="button" class="px" data-a="dp" data-i="'+a.id+'" data-k="'+k+'">✖</button></b></div>'}).join('');
+ ov('<h3>'+esc(a.name)+'</h3><div class="s">'+fd(a.date)+' · '+a.time+'</div>'
+ +'<div class="seg" id="sg"><button class="'+(cur==="w"?'on':'')+'" data-a="ss" data-i="w">بانتظار</button><button class="'+(cur==="a"?'on sa':'')+'" data-a="ss" data-i="a">حضر</button><button class="'+(cur==="x"?'on':'')+'" data-a="ss" data-i="x">ألغي</button></div><input type="hidden" id="g0" value="'+cur+'">'
+ +'<label>اسم المريض</label><input id="g4" autocomplete="off" value="'+esc(a.name)+'">'
+ +'<label>الهاتف</label><input id="g5" type="tel" value="'+esc(a.phone||'')+'">'
+ +'<div class="r2"><div><label>التاريخ</label><input id="g6" type="date" value="'+a.date+'"></div><div><label>الساعة</label><input id="g7" type="time" value="'+a.time+'"></div></div>'
+ +'<label>نوع العلاج</label>'+dd(a.tr||[])+oth(a.tr||[],a.other)
+ +'<div class="r3"><div><label>الحساب الكلي</label><input id="g2" type="number" inputmode="decimal" value="'+a.cost+'"></div><div><label>إضافة دفعة جديدة</label><input id="g3" type="number" inputmode="decimal" placeholder="0"></div><div class="cu"><label>العملة</label><select id="gc"><option value="S"'+(c==="S"?' selected':'')+'>'+CU.S+'</option><option value="D"'+(c==="D"?' selected':'')+'>$</option></select></div></div>'
+ +'<div class="s" style="margin-top:8px">المدفوع حتى الآن: <b>'+mo(a.paid,c)+'</b> · المتبقي: <b class="'+(a.cost-a.paid>0?'neg':'pos')+'">'+mo(Math.max(a.cost-a.paid,0),c)+'</b></div>'+pl
+ +(rm?'<div class="s neg" style="margin-top:6px">المتبقي عليه بكل زياراته: '+rm+'</div>':'')
+ +'<div class="yn"><button class="y" data-a="uv" data-i="'+a.id+'">حفظ</button><button class="r" data-a="dv" data-i="'+a.id+'">حذف</button></div><div class="yn"><button data-a="cf">إغلاق</button></div>');
+}
+function summary(){
+ var mo2=day.slice(0,7),v=ap.filter(function(a){return a.date.slice(0,7)===mo2&&a.st!=="x"}),ar=0,tt={S:[0,0],D:[0,0]};
+ v.forEach(function(a){if(a.st==="a")ar++;var k=a.cu||"S";tt[k][0]+=a.cost;tt[k][1]+=a.paid});
+ var h='<h3>ملخص الشهر</h3><div class="s">'+new Date(mo2+"-15T12:00:00").toLocaleDateString("ar",{month:"long",year:"numeric"})+'</div>',any=false;
+ ["S","D"].forEach(function(k){if(tt[k][0]>0||tt[k][1]>0){any=true;h+='<div class="ln"><b>'+(k==="S"?'بالليرة ('+CU.S+')':'بالدولار ($)')+'</b></div><div class="ln"><span>الحسابات</span><b>'+mo(tt[k][0],k)+'</b></div><div class="ln"><span>المحصّل</span><b class="pos">'+mo(tt[k][1],k)+'</b></div><div class="ln"><span>المتبقي</span><b class="neg">'+mo(tt[k][0]-tt[k][1],k)+'</b></div>'}});
+ if(!any)h+='<div class="empty" style="padding:14px 0">لا يوجد حسابات بعد</div>';
+ ov(h+'<div class="ln"><span>عدد المواعيد</span><b>'+v.length+'</b></div><div class="ln"><span>الذين حضروا</span><b>'+ar+'</b></div><div class="yn"><button data-a="cf">إغلاق</button></div>');
+}
+function num(id){return parseFloat(document.getElementById(id).value)||0}
+document.body.addEventListener("click",function(e){
+ var t=e.target.closest("[data-a]");if(!t)return;
+ var a=t.getAttribute("data-a"),i=t.getAttribute("data-i");
+ if(a==="k"){if(busy)return;if(pin.length<PL)pin+=i;
+  if(pin.length===PL){var tp=pin;busy=true;PINV=tp;
+   call({action:"login"}).then(function(j){busy=false;pin="";if(j&&j.ok){on=true;day=ymd(new Date());q="";R();loadAll(true)}else{PINV="";toast(j&&j.error==="locked"?"محاولات كثيرة، انتظر دقيقة":"كلمة السر غير صحيحة");R()}}).catch(function(){busy=false;pin="";PINV="";toast("تعذر الاتصال بالإنترنت، حاول مرة ثانية");R()});}
+  R()}
+ else if(a==="kd"){pin=pin.slice(0,-1);R()}
+ else if(a==="out"){logout()}else if(a==="rf"){loadAll()}
+ else if(a==="pd"){day=shift(day,-1);R()}else if(a==="nd"){day=shift(day,1);R()}
+ else if(a==="vo"){ap.forEach(function(x){if(x.id==i)visit(x)})}
+ else if(a==="ss"){document.getElementById("g0").value=i;var bs=document.getElementById("sg").children;for(var k=0;k<bs.length;k++){var on2=bs[k].getAttribute("data-i")===i;bs[k].className=on2?(i==="a"?"on sa":"on"):""}}
+ else if(a==="dd"){var dl=document.getElementById("ddl");dl.style.display=dl.style.display==="none"?"block":"none"}
+ else if(a==="tg"){var ix=trSel.indexOf(i);if(ix>-1)trSel.splice(ix,1);else trSel.push(i);t.classList.toggle("on");t.textContent=(ix>-1?"":"✔ ")+i;document.getElementById("ddb").textContent=ddText();if(i==="أخرى")document.getElementById("ot").style.display=trSel.indexOf("أخرى")>-1?"block":"none"}
+ else if(a==="dp"){ask={t:"p",id:i,k:+t.getAttribute("data-k")};conf("حذف هذه الدفعة؟",true)}
+ else if(a==="new"){form()}else if(a==="cf"){cl()}else if(a==="sum"){summary()}
+ else if(a==="sv"){var d={name:document.getElementById("f1").value.trim(),phone:document.getElementById("f2").value.trim(),date:document.getElementById("f3").value,time:document.getElementById("f4").value,tr:gather(),other:oval(),cost:num("f6"),paid:num("f7"),cu:document.getElementById("fc").value};if(!d.name||!d.date||!d.time){toast("اكتب الاسم والتاريخ والساعة");return}if(d.paid>0&&d.cost<=0){toast("اكتب الحساب الكلي أولاً");return}if(d.paid>d.cost){toast("المدفوع أكبر من الحساب الكلي");return}draft=d;ask={t:"a"};conf("إضافة موعد "+d.name+" يوم "+fd(d.date)+" الساعة "+d.time+"؟")}
+ else if(a==="uv"){
+  var nm=document.getElementById("g4").value.trim(),dt=document.getElementById("g6").value,tm=document.getElementById("g7").value;
+  if(!nm||!dt||!tm){toast("اكتب الاسم والتاريخ والساعة");return}
+  var ph=document.getElementById("g5").value.trim(),old="",trs=gather(),ot=oval(),cost=num("g2"),am=num("g3"),cu2=document.getElementById("gc").value,x0=null;
+  ap.forEach(function(x){if(x.id==i){old=x.name;x0=x}});
+  var cp=sumPay(x0);
+  if(am>0){if(cost<=0){toast("اكتب الحساب الكلي أولاً");return}if(cp+am>cost){toast("الدفعة أكبر من المتبقي ("+mo(cost-cp,cu2)+")");return}}
+  ap.forEach(function(y){if(y.name===old){y.name=nm;y.phone=ph}});
+  x0.date=dt;x0.time=tm;x0.tr=trs;x0.other=ot;x0.st=document.getElementById("g0").value;x0.cu=cu2;x0.cost=cost;
+  if(am>0){x0.pay=x0.pay||[];x0.pay.push({d:ymd(new Date()),a:am})}
+  x0.paid=sumPay(x0);if(!q)day=dt;
+  sync(ap.filter(function(y){return y.name===nm}));cl();R();toast(am>0?"تم الحفظ وإضافة الدفعة":"تم الحفظ")}
+ else if(a==="dv"){ask={t:"d",id:i};conf("حذف هذا الموعد؟",true)}
+ else if(a==="yes"){var k2=ask;ask=null;cl();var chg=null,rem=null;
+  if(k2&&k2.t==="a"){draft.id=Date.now();draft.pay=draft.paid>0?[{d:ymd(new Date()),a:draft.paid}]:[];draft.st="w";ap.push(draft);chg=[draft];day=draft.date;q="";toast("تمت إضافة الموعد")}
+  else if(k2&&k2.t==="d"){ap=ap.filter(function(x){return x.id!=k2.id});rem=[k2.id];toast("تم حذف الموعد")}
+  else if(k2&&k2.t==="p"){ap.forEach(function(x){if(x.id==k2.id){x.pay.splice(k2.k,1);x.paid=sumPay(x);chg=[x]}});toast("تم حذف الدفعة")}
+  if(chg||rem)sync(chg,rem);R()}
+ else if(a==="no"){var k3=ask;ask=null;if(k3&&k3.t==="a")form(draft);else cl()}
+});
+document.title=STORE;R();fetch(API).catch(function(){});
+setInterval(function(){if(on&&!q&&!document.getElementById("ov"))loadAll(true)},30000);
+</script>
+</body>
+</html>
